@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloraSense</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="nav-button-container">
+                <button id="btnAbout" class="nav-button oval-button">Что такое FloraSense?</button>
+            </div>
+            <div class="logo-wrapper">
+                <a href="/" id="logoLink" class="logo">
+                    <h1>FloraSense</h1>
+                </a>
+            </div>
+            <div class="nav-button-container">
+                <button id="btnFeatures" class="nav-button oval-button">Наши преимущества</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="welcome" class="animated-section">
+            <h2>FloraSense — ваш надежный помощник в уходе за растениями!</h2>
+        </section>
+
+        <section id="about" class="hidden animated-section">
+            <h2>Что такое FloraSense?</h2>
+            <p>FloraSense — инновационный инструмент для быстрого и точного определения здоровья ваших растений.</p>
+            <p>Наш сервис поможет вам своевременно выявить болезни и сохранить урожай!</p>
+        </section>
+
+        <section id="features" class="hidden animated-section">
+            <h2>Наши преимущества:</h2>
+            <ul class="feature-list">
+                <li>⭐ Быстрая диагностика болезней растений</li>
+                <li>🏞️ Помогает сохранять урожай и улучшать здоровье сада</li>
+                <li>🌳 Основано на современных технологиях глубокого обучения</li>
+            </ul>
+        </section>
+
+       <section class="upload-form">
+            <form id="uploadForm">
+                <input type="file" id="fileInput" name="file" accept="image/png,image/jpeg" required>
+                <button type="submit" class="oval-button">Вставьте фотографию растения</button>
+            </form>
+            <img id="preview" style="display: none; max-width: 300px; margin-top: 1rem;">
+            <div id="result" style="margin-top: 1rem;"></div>
+            <img id="segmentation" style="display: none; max-width: 300px; margin-top: 1rem;">
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://t.me/kitlool" class="icon"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://vk.com/looooooooooooooooo0ol" class="icon"><i class="fab fa-vk"></i></a>
+            <a href="https://discordapp.com/users/665869528026185739" class="icon"><i class="fab fa-discord"></i></a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
